@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #143887, #00032a);
+  height: 100vh;
+  color: #d3bac5;
+  font-family: "poppins";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("./assets/font/Poppins-Light.ttf");
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+input {
+  font-family: "poppins";
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    padding: 0.5px 0;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    background: inherit;
+    
+}
+
+/* MAIN */
+.music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.music-player .cover {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px  #d3bac5;
+    margin-bottom: 2rem;
+    animation: rotate-cover 10s linear infinite;
+}
+
+
+
+@keyframes rotate-cover {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.music-player .cover .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.music-player .song-information {
+    margin-bottom: 1.5rem;
+}
+
+.music-player .song-information .music-name {
+    margin-bottom: 0.5rem;
+}
+
+.music-player .song-information .singer-name {
+    color: #adacac;
+}
+
+.music-player .controls .control-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.music-player .control-buttons .control-btn {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #d3bac5;
+    cursor: pointer;
+  font-size: 1.7rem;
+
+}
+
+.music-player .player-controls .music-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+}
+
+.music-player .player-controls {
+    width: 50vw;
+    display: block;
+} 
+
+.music-player .player-controls .time-wrapper .seek-bar{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.music-player .player-controls .valume-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.music-player .player-controls .valume-wrapper .valume-bar{
+    width: 30%;
+}
+
+.music-player .player-controls .time-wrapper .seek-bar,
+.music-player .player-controls .valume-wrapper .valume-bar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    border-radius: 10px;
+    display: block;
+    background: #adacac;
+}
+
+.music-player .player-controls .time-wrapper .seek-bar::-webkit-slider-thumb,
+.music-player .player-controls .valume-wrapper .valume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #adacac;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.music-player .player-controls .time-wrapper .seek-bar:hover,
+.music-player .player-controls .valume-wrapper .valume-bar:hover {
+    background-color: #d3bac5;
+} 
+
+.music-player .player-controls .time-wrapper .seek-bar::-webkit-slider-thumb:hover,
+.music-player .player-controls .valume-wrapper .valume-bar::-webkit-slider-thumb:hover {
+    background-color: #d3bac5;
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+
+
+ 
+
+
+
+
+
+
