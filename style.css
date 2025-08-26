@@ -59,7 +59,7 @@ input {
     margin-bottom: 2rem;
     position: relative;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blure(8px);
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: 10;
 }
@@ -73,9 +73,12 @@ input {
     text-align: center;
 }
 
+
+
+
 .music-player .cover {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 15px  #d3bac5;
@@ -104,6 +107,8 @@ input {
         transform: rotate(0deg);
     }
 }
+
+
 
 .music-player .cover .cover-image {
     width: 100%;
@@ -138,7 +143,7 @@ input {
     border: none;
     color: #d3bac5;
     cursor: pointer;
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 
 }
 
@@ -214,6 +219,68 @@ input {
     text-align: center;
     margin-bottom: 1rem;
     margin-top: 3rem;
+    padding-bottom: 0.1rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 575px) {
+  .music-player .cover {
+    width: 200px;
+    height: 200px;
+}
+  .header__title {
+    font-size: 26px;
+  }
+  .music-name {
+    font-size: 16px;
+  }
+  .singer-name {
+    font-size: 12px;
+  }
+  .music-player .player-controls {
+    width: 80vw;
+    
+} 
+.footer-text {
+    font-size: 14px;
+}
+.music-player .player-controls .time-wrapper .seek-bar::-webkit-slider-thumb,
+.music-player .player-controls .volume-wrapper .volume-bar::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+}
+.music-player .player-controls .time-wrapper .seek-bar,
+.music-player .player-controls .volume-wrapper .volume-bar {
+    height: 4px;
+}
+.music-time {
+    font-size: 14px;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .music-player .player-controls {
+    width: 70vw;
+    
+} 
+.music-player .control-buttons .control-btn {
+    font-size: 1.5rem;
+    width: 25px;
+    height: 25px;
+}
+.header__title {
+    font-size: 30px;
+  }
+  .music-name {
+    font-size: 18px;
+  }
+  .singer-name {
+    font-size: 14px;
+  }
+  
+.footer-text {
+    font-size: 16px;
+}
 }
 
 
